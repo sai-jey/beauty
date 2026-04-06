@@ -1,0 +1,245 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#faf8f5;
+  --white:#fff;
+  --blush:#f2e8e0;
+  --rose:#c4866a;
+  --deep:#2d1f1a;
+  --muted:#9e8c85;
+  --border:#e8ddd7;
+  --dark:#1a1210;
+}
+.s{font-family:'Jost',sans-serif;background:var(--bg);color:var(--deep);}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 3rem;background:var(--white);border-bottom:0.5px solid var(--border);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--deep);letter-spacing:0.06em;}
+.logo span{color:var(--rose);font-style:italic;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center;}
+.nav-links a{font-size:0.78rem;color:var(--muted);text-decoration:none;letter-spacing:0.12em;text-transform:uppercase;font-weight:400;}
+.btn-nav{background:var(--rose);color:#fff!important;padding:0.55rem 1.4rem;letter-spacing:0.1em!important;font-size:0.72rem!important;}
+
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:580px;}
+.hero-left{background:var(--blush);padding:5rem 3.5rem;display:flex;flex-direction:column;justify-content:center;}
+.hero-label{font-size:0.68rem;letter-spacing:0.24em;color:var(--rose);text-transform:uppercase;margin-bottom:1.5rem;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:4rem;line-height:1.1;color:var(--deep);font-weight:300;margin-bottom:1.5rem;}
+.hero-title em{font-style:italic;color:var(--rose);}
+.hero-sub{font-size:0.9rem;color:var(--muted);line-height:1.9;max-width:340px;margin-bottom:2.5rem;font-weight:300;letter-spacing:0.02em;}
+.btn-book{display:inline-block;background:var(--deep);color:#fff;padding:0.95rem 2.2rem;font-size:0.78rem;text-decoration:none;letter-spacing:0.14em;text-transform:uppercase;}
+.btn-learn{display:inline-block;color:var(--muted);font-size:0.78rem;text-decoration:none;letter-spacing:0.12em;text-transform:uppercase;margin-left:1.5rem;border-bottom:0.5px solid var(--border);padding-bottom:2px;}
+.hero-right{background:var(--deep);display:flex;flex-direction:column;justify-content:flex-end;padding:2.5rem;position:relative;}
+.hero-circle{width:260px;height:260px;border-radius:50%;background:var(--blush);display:flex;align-items:center;justify-content:center;font-size:7rem;margin:2rem auto 1rem;}
+.hero-quote{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:rgba(255,255,255,0.7);text-align:center;line-height:1.6;font-weight:300;}
+.hero-quote-author{font-size:0.68rem;color:var(--rose);letter-spacing:0.16em;text-transform:uppercase;text-align:center;margin-top:0.8rem;}
+
+.ribbon{background:var(--rose);padding:1rem 3rem;display:flex;justify-content:space-around;align-items:center;}
+.rib-item{display:flex;align-items:center;gap:0.6rem;color:#fff;}
+.rib-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.5);}
+.rib-text{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:400;}
+
+.services{padding:3rem 2rem;background:var(--white);}
+.sec-label{font-size:0.65rem;letter-spacing:0.22em;color:var(--rose);text-transform:uppercase;margin-bottom:0.6rem;}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--deep);font-weight:300;margin-bottom:0.4rem;}
+.sec-sub{font-size:0.85rem;color:var(--muted);margin-bottom:3rem;font-weight:300;letter-spacing:0.02em;}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+.svc-card{border:0.5px solid var(--border);padding:2rem 1.5rem;background:var(--bg);}
+.svc-icon{width:44px;height:44px;border-radius:50%;background:var(--blush);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.2rem;}
+.svc-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--deep);font-weight:400;margin-bottom:0.5rem;}
+.svc-desc{font-size:0.78rem;color:var(--muted);line-height:1.7;font-weight:300;}
+.svc-from{font-size:0.72rem;color:var(--rose);margin-top:1rem;letter-spacing:0.08em;}
+
+.team{display:grid;grid-template-columns:1fr 1fr;background:var(--blush);}
+.team-left{padding:5rem 3.5rem;display:flex;flex-direction:column;justify-content:center;}
+.team-right{padding:3rem;display:flex;flex-direction:column;gap:1rem;justify-content:center;}
+.team-card{background:var(--white);padding:1.4rem;display:flex;align-items:center;gap:1.2rem;border:0.5px solid var(--border);}
+.team-avatar{width:54px;height:54px;border-radius:50%;background:var(--rose);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#fff;font-weight:300;flex-shrink:0;}
+.team-name{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--deep);font-weight:400;}
+.team-role{font-size:0.72rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.1rem;}
+.team-spec{font-size:0.68rem;color:var(--rose);margin-top:0.3rem;letter-spacing:0.08em;text-transform:uppercase;}
+
+.testimonials{padding:5rem 3rem;background:var(--white);}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.testi-card{background:var(--bg);border:0.5px solid var(--border);padding:2rem;}
+.testi-stars{color:var(--rose);font-size:0.75rem;letter-spacing:0.1em;margin-bottom:1rem;}
+.testi-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--deep);line-height:1.7;font-weight:300;margin-bottom:1.2rem;}
+.testi-name{font-size:0.72rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;}
+
+.booking{background:var(--deep);padding:1rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:center;}
+.booking-left .sec-label{color:var(--rose);}
+.booking-left .sec-title{color:#fff;}
+.booking-left .sec-sub{color:rgba(255,255,255,0.5);}
+.contact-list{display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem;}
+.contact-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;border:0.5px solid rgba(255,255,255,0.1);}
+.contact-label{font-size:0.65rem;color:var(--rose);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.2rem;}
+.contact-val{font-size:0.9rem;color:#fff;font-weight:300;}
+.btn-book-big{display:inline-block;background:var(--rose);color:#fff;padding:1.1rem 3rem;font-size:0.8rem;text-decoration:none;letter-spacing:0.16em;text-transform:uppercase;margin-top:2rem;}
+
+footer{background:var(--dark);padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;color:rgba(255,255,255,0.6);letter-spacing:0.06em;}
+.foot-logo span{color:var(--rose);font-style:italic;}
+.foot-links{display:flex;gap:2rem;}
+.foot-links a{font-size:0.68rem;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;}
+.foot-copy{font-size:0.65rem;color:rgba(255,255,255,0.3);}
+
+.btn-book, .btn-book-big, .btn-nav {
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn-book:hover, .btn-book-big:hover, .btn-nav:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+}
+
+.nav-links a {
+  position: relative; /* wichtig für Pseudo-Elemente oder Schatten */
+  padding: 0.5rem 1rem; /* sorgt dafür, dass der "Kasten" sichtbar wird */
+  border-radius: 4px; /* optional: abgerundete Ecken */
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  background: var(--rose); color: #fff; /* leichter Kasten/Hintergrund */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px); /* optional: leichter Lift */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; /* Höhe deiner Navbar */
+}
+
+@media (max-width: 768px) {
+  
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .btn-nav {
+    white-space: nowrap;
+    display: inline-block;
+    padding: 0.55rem 1.2rem;
+  }
+
+}
+
+</style>
+
+<div class="s">
+<nav>
+  <div class="logo">LoveBeauty<span>Studio</span></div>
+  <ul class="nav-links">
+    <li><a href="#leistungen">Leistungen</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#leistungen">Preise</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+    <li><a href="https://buchung.treatwell.ch/ort/399111/menue/" class="btn-nav" target="_blank">Termin buchen</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-left">
+    <p class="hero-label">Beauty Studio · Dietikon Zentrum</p>
+    <h1 class="hero-title">Schönheit,<br>die <em>von innen</em><br>leuchtet.</h1>
+    <p class="hero-sub">Wir glauben, dass wahre Schönheit Pflege, Zeit und Hingabe verdient. Unser Studio ist Ihr Rückzugsort — für Körper und Seele.</p>
+    <div>
+      <a href="https://buchung.treatwell.ch/ort/399111/menue/" class="btn-book" target="_blank">Termin vereinbaren</a>
+      <a href="#leistungen" class="btn-learn">Leistungen</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-circle">🌸</div>
+    <p class="hero-quote">„Whatever you do —<br>do it with love"</p>
+    <p class="hero-quote-author">LoveBeauty</p>
+  </div>
+</div>
+
+<div class="ribbon">
+  <div class="rib-item"><div class="rib-text">Premium Produkte</div></div>
+  <div class="rib-item"><div class="rib-dot"></div></div>
+  <div class="rib-item"><div class="rib-text">Zertifizierte Expertinnen</div></div>
+  <div class="rib-item"><div class="rib-dot"></div></div>
+  <div class="rib-item"><div class="rib-text">Individuelle Beratung</div></div>
+  <div class="rib-item"><div class="rib-dot"></div></div>
+  <div class="rib-item"><div class="rib-text">Entspannte Atmosphäre</div></div>
+</div>
+
+<section class="services" id="leistungen">
+<div class="services">
+  <p class="sec-label">Was wir anbieten</p>
+  <h2 class="sec-title">Unsere Leistungen</h2>
+  <p class="sec-sub">Handverlesene Behandlungen, abgestimmt auf Ihre individuellen Bedürfnisse.</p>
+  <div class="services-grid">
+    <div class="svc-card"><div class="svc-icon">💆</div><div class="svc-name">Gesichtsbehandlung</div><div class="svc-desc">Tiefenwirksame Reinigung und Pflege für eine strahlende, gleichmässige Haut.</div><div class="svc-from">ab CHF 85.–</div></div>
+    <div class="svc-card"><div class="svc-icon">💅</div><div class="svc-name">Maniküre & Nails</div><div class="svc-desc">Von klassisch bis Gel — gepflegte Hände und perfekte Nägel für jeden Anlass.</div><div class="svc-from">ab CHF 45.–</div></div>
+    <div class="svc-card"><div class="svc-icon">👁️</div><div class="svc-name">Wimpern & Brauen</div><div class="svc-desc">Lash Lifting, Extensions und Microblading für einen ausdrucksstarken Blick.</div><div class="svc-from">ab CHF 65.–</div></div>
+    <div class="svc-card"><div class="svc-icon">✨</div><div class="svc-name">Make-up & Styling</div><div class="svc-desc">Professionelles Make-up für Hochzeiten, Events oder den besonderen Moment.</div><div class="svc-from">ab CHF 120.–</div></div>
+  </div>
+</div>
+</section>
+
+<section class="team" id="team"></section>
+<div class="team">
+  <div class="team-left">
+    <p class="sec-label">Unser Team</p>
+    <h2 class="sec-title">Expertinnen<br>mit Herz</h2>
+    <p class="sec-sub" style="margin-top:0.8rem;font-size:0.88rem;color:var(--muted);line-height:1.8;font-weight:300;">Jede unserer Spezialistinnen bringt jahrelange Erfahrung, Leidenschaft und Feingefühl mit. Sie sind nicht nur ausgebildet — sie lieben, was sie tun.</p>
+  </div>
+  <div class="team-right">
+    <div class="team-card"><div class="team-avatar">SC</div><div><div class="team-name">Sophie Clauss</div><div class="team-role">Studio-Leiterin</div><div class="team-spec">Gesicht · Anti-Aging</div></div></div>
+    <div class="team-card"><div class="team-avatar">LM</div><div><div class="team-name">Lena Müller</div><div class="team-role">Nail Artist</div><div class="team-spec">Gel · Acryl · Nail Art</div></div></div>
+    <div class="team-card"><div class="team-avatar">AK</div><div><div class="team-name">Aisha Kowalski</div><div class="team-role">Lash & Brow Specialist</div><div class="team-spec">Extensions · Microblading</div></div></div>
+    <div class="team-card"><div class="team-avatar">NR</div><div><div class="team-name">Nina Roth</div><div class="team-role">Make-up Artist</div><div class="team-spec">Bridal · Editorial</div></div></div>
+  </div>
+</div>
+
+<div class="testimonials">
+  <p class="sec-label">Kundenstimmen</p>
+  <h2 class="sec-title">Was unsere Kunden sagen</h2>
+  <div class="testi-grid">
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><div class="testi-text">„Ich fühle mich nach jeder Behandlung wie neu geboren. Das Team ist unglaublich einfühlsam und professionell."</div><div class="testi-name">— Maria B., Zürich</div></div>
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><div class="testi-text">„Für meine Hochzeit hat Nina das perfekte Make-up gezaubert. Ich habe mich wunderschön gefühlt."</div><div class="testi-name">— Sarah K., Winterthur</div></div>
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><div class="testi-text">„Endlich ein Studio, das sich wirklich Zeit nimmt. Die Atmosphäre ist einzigartig — ich komme immer wieder."</div><div class="testi-name">— Julia P., Zürich</div></div>
+  </div>
+</div>
+
+<section class="booking" id="kontakt"></section>
+<div class="booking">
+  <div class="booking-left">
+    <p class="sec-label">Termin & Kontakt</p>
+    <h2 class="sec-title">Bereit für<br>Ihren Moment?</h2>
+    <p class="sec-sub">Buchen Sie online oder rufen Sie uns direkt an. Wir freuen uns auf Sie.</p>
+    <a href="https://buchung.treatwell.ch/ort/399111/menue/" class="btn-book-big" target="_blank">Online Termin buchen</a>
+  </div>
+  <div>
+    <div class="contact-list">
+      <div class="contact-item"><div><div class="contact-label">Telefon</div><div class="contact-val">+41 55 556 51 52</div></div></div>
+      <div class="contact-item"><div><div class="contact-label">Email</div><div class="contact-val">info@lovebeauty.ch</div></div></div>
+      <div class="contact-item"><div><div class="contact-label">Adresse</div><div class="contact-val">Löwenstrasse 9, 8953 Dietikon</div></div></div>
+      <div class="contact-item"><div><div class="contact-label">Öffnungszeiten</div><div class="contact-val">Di–Fr · 09:00–19:00 Uhr, Sa · 09:00–17:00 Uhr</div></div></div>
+    </div>
+  </div>
+</div>
+
+
+<footer>
+  <div class="foot-logo">LoveBeauty <span>Studio</span></div>
+  <div class="foot-links">
+    <a href="#leistungen">Leistungen</a>
+    <a href="#team">Team</a>
+    <a href="#">Impressum</a>
+    <a href="#">Datenschutz</a>
+  </div>
+  <div class="foot-copy">© 2026 LoveBeauty Studio Dietikon</div>
+</footer>
+</div>
